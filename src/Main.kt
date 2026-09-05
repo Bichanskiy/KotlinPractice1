@@ -1,10 +1,5 @@
 fun List<Order>.toReceipt() : String{
-    val result : String = buildString {
-        for (order in this){
-            appendLine(order.toString())
-        }
-    }
-    return result
+    return this.toString()
 }
 
 fun main() {
@@ -35,6 +30,7 @@ fun main() {
         discount = 0.10,
     )
 
+
     val orders = listOf(
         Order(
             id = 1,
@@ -50,6 +46,7 @@ fun main() {
     )
 
     println(orders.toReceipt())
+
 }
 
 enum class Category{
